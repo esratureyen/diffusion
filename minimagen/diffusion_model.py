@@ -86,9 +86,9 @@ class GaussianDiffusion(nn.Module):
 
         return time_transitions
 
-    def q_posterior(self, x_start: torch.tensor, x_t: torch.tensor, t: torch.tensor) -> tuple[torch.tensor,
+    def q_posterior(self, x_start: torch.tensor, x_t: torch.tensor, t: torch.tensor) -> tuple([torch.tensor,
                                                                                               torch.tensor,
-                                                                                              torch.tensor]:
+                                                                                              torch.tensor]):
         """
         Calculates q_posterior parameters given a starting image :code:`x_start` (x_0) and a noised image :code:`x_t`.
 
