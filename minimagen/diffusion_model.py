@@ -78,7 +78,7 @@ class GaussianDiffusion(nn.Module):
         """
         return torch.randint(0, self.num_timesteps, (batch_size,), device=device, dtype=torch.long)
 
-    def _get_sampling_timesteps(self, batch: int, *, device: torch.device) -> list[torch.tensor]:
+    def _get_sampling_timesteps(self, batch: int, *, device: torch.device) -> list([torch.tensor]):
         time_transitions = []
 
         for i in reversed(range(self.num_timesteps)):
