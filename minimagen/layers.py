@@ -128,7 +128,7 @@ class Block(nn.Module):
         self.activation = nn.SiLU()
         self.project = nn.Conv2d(dim, dim_out, 3, padding=1)
 
-    def forward(self, x: torch.tensor, scale_shift: tuple[torch.tensor, torch.tensor] = None) -> torch.tensor:
+    def forward(self, x: torch.tensor, scale_shift: tuple([torch.tensor, torch.tensor]) = None) -> torch.tensor:
         """
         Forward pass
 
