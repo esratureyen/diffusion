@@ -64,8 +64,8 @@ def pull_img(img_filename):
     return img
 
 
-filename_test = "C:/Users/Mert Edgü/Desktop/neural/eee443_project_dataset_test.h5"
-filename_train = "C:/Users/Mert Edgü/Desktop/neural/eee443_project_dataset_train.h5"
+filename_test = r"/content/drive/MyDrive/neural_final_project/test_data"
+filename_train = r"/content/drive/MyDrive/neural_final_project/train_data"
 
 ftest = h5py.File(filename_test, 'r')
 ftrain = h5py.File(filename_train, 'r')
@@ -103,7 +103,7 @@ for i in range(
     img_id = i + 1
     image_ids.append(img_id)
 
-    filename = "C:/Users/Mert Edgü/Desktop/neural/train_data/" + str(img_id) + ".jpg"
+    filename = "/content/train_data/" + str(img_id) + ".jpg"
     isExist = os.path.exists(filename)
     if isExist:
         # temp = Image.open(filename)
