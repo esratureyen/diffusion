@@ -269,7 +269,7 @@ class CrossEmbedLayer(nn.Module):
     def __init__(
             self,
             dim_in: int,
-            kernel_sizes: tuple[int, ...],
+            kernel_sizes: tuple([int, ...]),
             dim_out: int = None,
             stride: int = 2
     ):
@@ -347,7 +347,7 @@ class Parallel(nn.Module):
     """
     Passes input through parallel functions and then sums the result.
     """
-    def __init__(self, *fns: tuple[Callable, ...]):
+    def __init__(self, *fns: tuple([Callable, ...])):
         super().__init__()
         self.fns = nn.ModuleList(fns)
 
